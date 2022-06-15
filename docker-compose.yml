@@ -1,0 +1,31 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/usr/src/telework
+    expose:
+      - "3000"
+    ports:
+      - 3000:3000
+    stdin_open: true
+    tty: true
+    environment:
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE: ${DATABASE}
+      DBUSER: ${DBUSER}
+      DBPASSWORD: ${DBPASSWORD}
+    depends_on:
+      - db
+  db:
+    image: postgres:14.3-alpine
+    volumes:
+      - postgresql:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "127.0.0.1:5432:5432"
+volumes:
+  postgresql:
