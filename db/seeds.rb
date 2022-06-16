@@ -14,7 +14,7 @@ end
 
 User.all.each do |user|
     5.times do
-        Post.create(user: user, content: Faker::Lorem.paragraphs)
+        Post.create(user: user, content: Faker::Lorem.paragraph(sentence_count: 10))
     end
 end
 
