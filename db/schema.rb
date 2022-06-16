@@ -43,26 +43,21 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_16_140900) do
   end
 
   create_table "comments", force: :cascade do |t|
+    t.bigint "user_id", null: false
     t.bigint "post_id", null: false
     t.string "content", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_comments_on_post_id"
-  end
-
-  create_table "homepages", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_homepages_on_user_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "posts", force: :cascade do |t|
-    t.bigint "homepage_id", null: false
+    t.bigint "user_id", null: false
     t.string "content", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["homepage_id"], name: "index_posts_on_homepage_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -74,6 +69,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_16_140900) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "posts"
-  add_foreign_key "homepages", "users"
-  add_foreign_key "posts", "homepages"
+  add_foreign_key "comments", "users"
+  add_foreign_key "posts", "users"
 end
