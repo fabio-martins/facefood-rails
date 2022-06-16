@@ -1,0 +1,6 @@
+-  @posts.each do |post|
+    .card
+        = post.content
+        -   post.comments.each do |comment|
+            .card-comment
+                = comment.content

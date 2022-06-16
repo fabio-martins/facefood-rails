@@ -11,13 +11,13 @@
   %body
     %header
       = render 'shared/header'
-    .main-container 
-      .main-container-left 
-        %aside
-          = render 'shared/left_side'
-      .main-container-center
-        %main
+    %main
+      .main-container 
+        .main-container-left 
+          %aside
+            = render 'shared/left_side'
+        .main-container-center
           = yield
-      .main-container-right
-        %aside
-          = render 'shared/right_side'
+        .main-container-right
+          %aside
+            = render 'shared/right_side'
