@@ -26,5 +26,8 @@ module FacebookRailsTdd
         helper_specs: false,
         routing_specs: false
     end
+    config.i18n.default_locale = :'en'
+    config.assets.precompile += ['assets'] 
+    config.assets.paths << Rails.root.join("app", "assets")
   end
 end
