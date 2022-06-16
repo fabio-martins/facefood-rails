@@ -12,13 +12,13 @@ gem "stimulus-rails"
 gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
+gem "net-http"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  gem "web-console"
   gem "byebug"
   gem "rspec-rails", "~> 6.0.0.rc1"
-  gem 'factory_bot_rails'
+  gem "factory_bot_rails"
   gem "faker"
   gem "shoulda-matchers", "~> 5.0"
   gem "capybara"
@@ -29,7 +29,6 @@ group :development do
 end
 
 group :test do
-  gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
 end
