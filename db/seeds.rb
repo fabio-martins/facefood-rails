@@ -13,5 +13,11 @@ require 'faker'
 end
 
 User.all.each do |user|
-    
+    5.times do
+        Post.create(user: user, content: Faker::Lorem.paragraphs)
+    end
+end
+
+Post.all.each do |post|
+    Comment.create(user: User.all.sample,post: post, content: Faker::Lorem.sentence)
 end
