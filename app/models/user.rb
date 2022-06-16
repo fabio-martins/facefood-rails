@@ -1,5 +1,5 @@
 class User < ApplicationRecord
     has_one_attached :photo
 
-    validates_presence_of :full_name
+    validates :full_name, presence: true
 end
