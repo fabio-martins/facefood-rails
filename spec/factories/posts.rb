@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :post do
-    homepage
+    user
     content { Faker::Lorem.sentences }
   end
 end
