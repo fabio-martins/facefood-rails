@@ -59,14 +59,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_16_140900) do
 
   create_table "posts", force: :cascade do |t|
     t.bigint "homepage_id", null: false
-    t.string "content"
+    t.string "content", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["homepage_id"], name: "index_posts_on_homepage_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "full_name"
+    t.string "full_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
