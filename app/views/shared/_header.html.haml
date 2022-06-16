@@ -16,6 +16,6 @@
                 %img{src: 'assets/images/other_btn.jpg'}                
     .right-header-items
         %img{src: 'assets/images/logo.png', class: 'photo'}
-        %strong{class: 'username'} Fabio Martins
+        %strong{class: 'username'}= session[:current_user]["full_name"]
 
     
