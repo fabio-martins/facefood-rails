@@ -6,7 +6,7 @@ class HomepageController < ApplicationController
   end
 
   def set_logged_user
-    if session[:current_user].empty?
+    if session[:current_user].nil?
       session[:current_user] = User.all.sample
     end  
   end
