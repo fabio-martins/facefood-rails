@@ -1,5 +1,7 @@
 .card-comment{ id: "#{dom_id comment}" }
-    .comment-owner
-        = comment.user.full_name
-    .comment    
-        = comment.content
+    = image_tag get_photo_from_comment_owner(comment.id), class: 'comment-owner-photo' unless get_photo_from_current_user.blank?
+    .comment
+        .comment-owner-name
+            = comment.user.full_name
+        .comment-content
+            = comment.content

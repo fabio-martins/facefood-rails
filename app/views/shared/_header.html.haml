@@ -15,7 +15,7 @@
             %li
                 %img{src: 'assets/images/other_btn.jpg'}                
     .right-header-items
-        %img{src: 'assets/images/logo.png', class: 'photo'}
+        = image_tag get_photo_from_current_user, class: 'photo' unless get_photo_from_current_user.blank?
         %strong{class: 'username'}= session[:current_user]["full_name"]
 
     

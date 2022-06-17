@@ -1,4 +1,5 @@
 .card-title 
+    = image_tag get_photo_from_current_user, class: 'photo' unless get_photo_from_current_user.blank?
     = post.user.full_name
 = post.content
 = image_tag post.image unless post.image.blank?
