@@ -41,3 +41,21 @@
     padding: 5px;
     align-self: center;
 }
+
+.input-new-comment{
+    width: 80%;
+    height: 30px;
+    border: none;
+    background-color: $background;
+    border-radius: 20px;
+    align-self: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    word-wrap: break-word;
+
+    &placeholder{
+        padding-left: 20px;
+        align-self: center;
+    }
+}
