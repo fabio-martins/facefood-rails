@@ -1,2 +1,5 @@
 .card-comment{ id: "#{dom_id comment}" }
-    = comment.content
+    .comment-owner
+        = comment.user.full_name
+    .comment    
+        = comment.content

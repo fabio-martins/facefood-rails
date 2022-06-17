@@ -3,5 +3,7 @@
         .container-new-post
             = f.text_field :content, class: 'input-new-post', placeholder: 'Escreva um novo post ...'
             .line-new-post
-            %button{ class: 'btn-new-post-image'}
+            %label{ class:'btn-add-post' }
                 %img{src: 'assets/images/buttons/button_new_post_image.png'}
+                %span Foto/Imagem
+                = f.file_field :image
