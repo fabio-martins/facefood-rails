@@ -1,8 +1,7 @@
-.card
-    = post.content
-    = form_for(Comment.new, url: comment_index_path) do |f|
-        = f.hidden_field :post_id, {value: post.id}
-        = f.text_field :content, class: 'input-new-comment', placeholder: 'Escreva um comentário ...'
-        = turbo_stream_from post, :comments
-        #comments
-            = render post.comments
+= post.content
+= form_for(Comment.new, url: comment_index_path) do |f|
+    = f.hidden_field :post_id, {value: post.id}
+    = f.text_field :content, class: 'input-new-comment', placeholder: 'Escreva um comentário ...'
+    = turbo_stream_from post, :comments
+    #comments
+        = render post.comments

@@ -1,3 +1,5 @@
 = render 'posts/new'
 -  @posts.each do |post|
-    = render 'posts/list', post: post
+    = turbo_stream_from post
+    .card{id: "#{dom_id post}"}
+        = render 'posts/list', post: post
