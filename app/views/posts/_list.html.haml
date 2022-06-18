@@ -1,5 +1,5 @@
 .card-title 
-    = image_tag get_photo_from_current_user, class: 'photo' unless get_photo_from_current_user.blank?
+    = image_tag get_photo_from_post_owner(post.id), class: 'photo' unless get_photo_from_post_owner(post.id).blank?
     = post.user.full_name
 .card-created-at
     = post.date
