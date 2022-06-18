@@ -8,7 +8,7 @@ class Post < ApplicationRecord
 
   after_create_commit { broadcast_prepend_to('posts', target: 'posts') }
 
-  def date 
+  def posted_at 
     self.created_at.strftime('%d/%m/%Y %I:%M')
   end
 end
