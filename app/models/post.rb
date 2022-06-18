@@ -5,4 +5,8 @@ class Post < ApplicationRecord
 
   validates :user, presence: true
   validates :content, presence: true
+
+  def date 
+    self.created_at.strftime('%d/%m/%Y %I:%M')
+  end
 end

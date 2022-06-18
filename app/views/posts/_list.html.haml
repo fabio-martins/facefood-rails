@@ -1,7 +1,10 @@
 .card-title 
     = image_tag get_photo_from_current_user, class: 'photo' unless get_photo_from_current_user.blank?
     = post.user.full_name
-= post.content
+.card-created-at
+    = post.date
+.card-content
+    = post.content
 = image_tag post.image unless post.image.blank?
 = form_for(Comment.new, url: comment_index_path) do |f|
     = f.hidden_field :post_id, {value: post.id}
