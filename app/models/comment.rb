@@ -5,4 +5,6 @@ class Comment < ApplicationRecord
   validates :content, presence: true
   validates :post, presence: true
   validates :user, presence: true
+
+  after_create_commit { broadcast_prepend_to(self.post, :comments) }
 end

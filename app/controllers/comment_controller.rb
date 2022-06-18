@@ -4,7 +4,6 @@ class CommentController < ApplicationController
     current_user = session[:current_user]["id"]
     comment = post.comments.create!(user_id: current_user, 
                                     content: comments_params[:content])
-    comment.broadcast_prepend_to(post,:comments)
     redirect_to root_path
   end
 
