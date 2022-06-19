@@ -1,9 +1,11 @@
 .card
     = form_for(Post.new, url: post_index_path) do |f|
         .container-new-post
-            = f.text_field :content, class: 'input-new-post', placeholder: 'Escreva um novo post ...'
-            .line-new-post
             %label{ class:'btn-add-post' }
                 %img{src: 'assets/images/buttons/button_new_post_image.png'}
                 %span Foto/Imagem
                 = f.file_field :image
+            .line-new-post
+            = f.text_field :content, class: 'input-new-post', placeholder: 'Escreva um novo post ...'
+            = f.submit 'Publicar', class: 'btn-submit'
+            %in
