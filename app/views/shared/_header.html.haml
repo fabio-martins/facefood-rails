@@ -9,4 +9,4 @@
                 %img{src: 'assets/images/home_btn.jpg'}
     .right-header-items
         = image_tag get_photo_from_current_user, class: 'photo' unless get_photo_from_current_user.blank?
-        %strong{class: 'username'}= session[:current_user]["full_name"]
+        %strong{class: 'username'}= session[:current_user]["full_name"] unless session[:current_user].nil?
