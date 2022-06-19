@@ -7,9 +7,9 @@
     .card-content
         = post.content
     = image_tag post.image unless post.image.blank?
-    = form_for(Comment.new, url: comment_index_path) do |f|
-        = f.hidden_field :post_id, {value: post.id}
-        = f.text_field :content, class: 'input-new-comment', placeholder: 'Escreva um comentário ...'
-        = turbo_stream_from post, :comments
-        = turbo_frame_tag "comments" do
+    = turbo_stream_from post, :comments
+    = turbo_frame_tag "comments" do
+        = form_for(Comment.new, url: comment_index_path) do |f|
+            = f.hidden_field :post_id, {value: post.id}
+            = f.text_field :content, class: 'input-new-comment', placeholder: 'Escreva um comentário ...'
             = render post.comments

@@ -4,6 +4,7 @@ class CommentController < ApplicationController
     current_user = session[:current_user]["id"]
     comment = post.comments.create!(user_id: current_user, 
                                     content: comments_params[:content])
+    post.save!
     redirect_to root_path
   end
 
