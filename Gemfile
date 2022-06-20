@@ -33,4 +33,5 @@ end
 group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem "rack_session_access"
 end

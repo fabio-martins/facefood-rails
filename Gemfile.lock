@@ -165,6 +165,9 @@ GEM
     rack (2.2.3.1)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
+    rack_session_access (0.2.0)
+      builder (>= 2.0.0)
+      rack (>= 1.0.0)
     rails (7.0.3)
       actioncable (= 7.0.3)
       actionmailbox (= 7.0.3)
@@ -288,6 +291,7 @@ DEPENDENCIES
   net-http
   pg (~> 1.1)
   puma (~> 5.0)
+  rack_session_access
   rails (~> 7.0.3)
   rspec-rails (~> 6.0.0.rc1)
   sass-rails
