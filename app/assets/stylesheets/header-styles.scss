@@ -12,27 +12,7 @@
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
 
     .left-header-items {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        background-color: $white;
-        align-self: center;
         width: 100%;
-
-        .logo {
-            margin-left: 10px;
-        }
-
-        .input-search {
-            border-radius: 20px;
-            height: 40px;
-            width: 250px;
-            border: none;
-            background-color: $background;
-            margin-left: 5px;
-            align-self: center;
-            font-size: 14px;
-        }
     }
 
     .main-header-items {
@@ -42,16 +22,24 @@
         width: 100%;
         background-color: $white;
 
-        ul{
-            background-color: $white;
-            align-self: center;
+        .logo {
+            margin-left: 10px;
+            height: 40px;
         }
-        li{
-            display: inline-block;
-            text-decoration: none;
-            background-color: $white;
-            width: 90px;
-            cursor: pointer;
+
+        .input-search {
+            border-radius: 40px;
+            height: 40px;
+            width: 90%;
+            border: none;
+            background-color: $background;
+            margin-left: 5px;
+            align-self: center;
+            font-size: 14px;
+        }
+        form {
+            display: block;
+            width: 100%;
         }
     }
 

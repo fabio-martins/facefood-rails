@@ -1,12 +1,10 @@
 .header
     .left-header-items
-        %img{src: 'assets/images/logo.png', class: 'logo'}
+
+    .main-header-items
+        %img{src: 'assets/images/facefood.jpg', class: 'logo'}
         = form_with(url: root_path, method: :get) do |f|
             = f.text_field :query, value: params[:query], class: 'input-search', placeholder: 'Buscar posts...'
-    .main-header-items
-        %ul
-            %li
-                %img{src: 'assets/images/home_btn.jpg'}
     .right-header-items
         = image_tag get_photo_from_current_user, class: 'photo' unless get_photo_from_current_user.blank?
         %strong{class: 'username'}= session[:current_user]["full_name"] unless session[:current_user].nil?

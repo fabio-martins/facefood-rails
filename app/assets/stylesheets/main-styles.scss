@@ -139,7 +139,7 @@
         align-items: center;
     }
     .btn-submit{
-        background-color: $blue;
+        background-color: $green;
         color: $white;
         font-weight: bold;
         border-radius: 8px;
@@ -151,7 +151,7 @@
         cursor: pointer;
     }
     .btn-submit:hover{
-        background-color: $blue-light;
+        background-color: $dark-green;
     }
     input[type="file"] {
         align-self: center;
