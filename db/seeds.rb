@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+reset_sequences = "ALTER SEQUENCE active_storage_attachments_id_seq RESTART WITH 1;\n" + 
+                   "ALTER SEQUENCE active_storage_blobs_id_seq RESTART WITH 1;\n" + 
+                   "ALTER SEQUENCE active_storage_variant_records_id_seq RESTART WITH 1;\n" + 
+                   "ALTER SEQUENCE users_id_seq RESTART WITH 1;\n";
+
 insert_active_storage_attachments = "INSERT INTO public.active_storage_attachments (\"name\",record_type,record_id,blob_id,created_at) VALUES" + 
                                     "('photo','User',1,1,'2022-06-20 22:37:51.265529')," + 
                                     "('photo','User',2,2,'2022-06-20 22:37:51.30703'), " + 
@@ -22,6 +27,7 @@ insert_active_storage_blobs = "INSERT INTO public.active_storage_blobs (\"key\",
 
 unless Rails.env.production?
     connection = ActiveRecord::Base.connection
+    connection.execute(reset_sequences)
     connection.execute(insert_active_storage_blobs)
     connection.execute(insert_active_storage_attachments)
 end                                                         
