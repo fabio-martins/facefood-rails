@@ -15,7 +15,6 @@ gem "bootsnap", require: false
 gem "net-http"
 gem "haml-rails"
 gem "sass-rails"
-gem "aws-sdk-s3", require: false
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
