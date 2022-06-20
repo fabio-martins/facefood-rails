@@ -6,8 +6,6 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-require 'faker'
-
 user_1 = Rack::Test::UploadedFile.new(File.open(File.join(Rails.root, 'app/assets/images/photos/1.jpeg')))
 User.create(full_name: 'Rebeca J. Stuart', photo: user_1)
 
