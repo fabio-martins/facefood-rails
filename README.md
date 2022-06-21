@@ -1,24 +1,4 @@
-# README
+# FACEFOOD
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://user-images.githubusercontent.com/16558068/174885977-60fbfd35-98e0-4923-b59d-864a2bcaad6b.mp4
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
