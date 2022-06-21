@@ -4,10 +4,10 @@
             .container-new-post
                 %label{ class:'btn-add-post' }
                     %img{src: 'assets/images/buttons/button_new_post_image.png'}
-                    %span Foto/Imagem
+                    %span= t(:'activerecord.attributes.post.photo')
                     = f.file_field :image, data:{ action: 'post#previewImage' }
                 %img{'data-post-target': 'preview'}
                 .line-new-post
-                = f.text_field :content, class: 'input-new-post', placeholder: 'Escreva um novo post ...'
-                = f.submit 'Publicar', class: 'btn-submit'
+                = f.text_field :content, class: 'input-new-post', placeholder: t(:'activerecord.attributes.post.new_post')
+                = f.submit t(:'activerecord.attributes.post.publish'), class: 'btn-submit'
                 %in

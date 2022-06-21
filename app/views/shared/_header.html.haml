@@ -4,7 +4,7 @@
     .main-header-items
         %img{src: 'assets/images/facefood.jpg', class: 'logo'}
         = form_with(url: root_path, method: :get) do |f|
-            = f.text_field :query, value: params[:query], class: 'input-search', placeholder: 'Buscar posts...'
+            = f.text_field :query, value: params[:query], class: 'input-search', placeholder: t(:'activerecord.attributes.post.search_post')
     .right-header-items
         = image_tag get_photo_from_current_user, class: 'photo' unless get_photo_from_current_user.blank?
         %strong{class: 'username'}= session[:current_user]["full_name"] unless session[:current_user].nil?
