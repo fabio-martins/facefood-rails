@@ -10,7 +10,7 @@ https://user-images.githubusercontent.com/16558068/174885977-60fbfd35-98e0-4923-
 See the oficial documentation to install it
 https://docs.docker.com/compose/install/
 
-### How to execute the projeto?
+### How to execute the project?
 Open your terminal and execute the commands:
 
  1. Clone the project to a new directory
